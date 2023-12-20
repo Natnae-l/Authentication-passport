@@ -11,7 +11,7 @@ const localStrat = require('./config/passport')
 const mongoDb = "mongodb+srv://Natnael:VhiIqJUQBmLPbfHc@myatlasclusteredu.sp4fkpp.mongodb.net/Authentication?retryWrites=true&w=majority";
 mongoose.connect(mongoDb)
     .then(() => app.listen(3003, () => console.log("app listening on port 3003!")))
-    .catch(e => console.log(err))
+    .catch(e => console.log(e))
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
